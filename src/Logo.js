@@ -6,7 +6,7 @@ import './App.css';
 function Logo() {
     return (
         <div>
-            <img style={{cursor : "pointer"}} src="logo.png" />
+            <img src="logo.png" />
         </div>
     );
 }
