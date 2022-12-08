@@ -2,9 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+
 import Home from './pages/Home';
-import Film from './pages/Film';
-import FilmPopulaire from './pages/FilmPopulaire';
+import PopularDesc from './pages/PopularDesc';
+import PopularMovie from './pages/PopularMovie';
+import Toprated from './pages/Toprated';
+import TopratedDescription from './pages/TopRatedDescription';
+
 import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
@@ -19,12 +23,20 @@ const router = createBrowserRouter([
     element: <Home/>,
   },
   {
-    path:"/film/:id",
-    element: <Film/>
+    path:"/popularmovie",
+    element: <PopularMovie/>,
   },
   {
-    path:"/filmpopulaire",
-    element: <FilmPopulaire/>
+    path:"/populardesc/:id",
+    element: <PopularDesc/>,
+  },
+  {
+    path:"/toprated",
+    element: <Toprated/>,
+  },
+  {
+    path:"/toprateddesc/:id",
+    element: <TopratedDescription/>
   }
 ]);
 

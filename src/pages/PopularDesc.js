@@ -3,9 +3,9 @@ import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import "../App.css";
 
-const Film = () => {
+const PopularDesc = () => {
   let { id } = useParams();
-  const [film, setPokemon] = useState('null');
+  const [film, setFilm] = useState('null');
 
   useEffect(() => {
     getData();
@@ -15,7 +15,7 @@ const Film = () => {
     const res = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=d3994bb5c3f66e144147b5e2130fc60c`);
     console.log("res", res)
     console.log("res", res.data.results);
-    setPokemon(res.data.results);
+    setFilm(res.data.results);
 
   }
 
@@ -32,4 +32,4 @@ const Film = () => {
   );
 };
 
-export default Film;
+export default PopularDesc;

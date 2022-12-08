@@ -33,7 +33,8 @@ const Home = () => {
   }
   return (
     <div>
-      <a href="http://localhost:3000/filmpopulaire"><button>tendance</button></a>
+      <a href="http://localhost:3000/PopularMovie"><button>tendance</button></a>
+      <a href="http://localhost:3000/toprated"><button>les mieux notés</button></a>
       <input onChange={handleChange} type="text" />
       {pokeListFiltered.map((film, index) => {
         return (

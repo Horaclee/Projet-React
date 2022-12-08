@@ -4,7 +4,7 @@ import React from 'react'
 import {Link} from "react-router-dom"
 import "../App.css";
 
-const FilmPopulaire = () => {
+const PopularMovie = () => {
   const [filmList, setFilmList] = useState([]);
   const [filmListFiltered, setFilmListFiltered] = useState([]);
 
@@ -35,11 +35,12 @@ const FilmPopulaire = () => {
         <input onChange={handleChange} type="text" />
         {filmListFiltered.map((film, index) => {
             return (
-            <div class="imagehome">
-                <p key={film.title}>
-                <Link to={`/Film/${index}`}><img class="image" src={`https://image.tmdb.org/t/p/original/${film.backdrop_path}`}></img></Link>
+            <div class="container">
+              <div class="item">
+                <p key={film.title}></p>
+                <Link to={`/populardesc/${index}`}><img class="image" src={`https://image.tmdb.org/t/p/original/${film.backdrop_path}`}></img></Link>
                 <p class="titre">{film.title}</p>
-                </p>
+              </div>
             </div>
         );
       })}
@@ -48,4 +49,4 @@ const FilmPopulaire = () => {
   )
 }
 
-export default FilmPopulaire;
+export default PopularMovie;
